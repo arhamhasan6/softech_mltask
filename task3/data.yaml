@@ -1,0 +1,22 @@
+train: ../train/images  # Path to the training dataset annotation file (e.g., train.txt)
+val: ../valid/images 
+test: ../test/images
+     # Path to the validation dataset annotation file (e.g., val.txt)
+
+nc: 1                      # Number of classes in your dataset
+names: ['damage'] # Path to a text file containing class names (one per line, e.g., classes.txt)
+
+img-size: 1024  
+
+
+# Optimizer settings
+optimizer:
+  name: SGD                  # Optimizer type (options: SGD, Adam, etc.)
+  lr: 0.01                   # Learning rate
+  momentum: 0.937            # Momentum (SGD only)
+  weight-decay: 0.0005       # Weight decay
+
+# LR scheduler settings
+lr-scheduler:
+  name: cosine               # Learning rate scheduler type (options: cosine, step, etc.)
+  warmup-epochs: 3           # Number of warmup epochs
