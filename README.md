@@ -156,7 +156,7 @@ The code splits the STL-10 dataset into training, validation, and test sets. By 
 - This code concentrates on efficiently generating permutations and can serve as a valuable resource for understanding backtracking algorithms.
 
 ############################################################################################################################################################################
-## Task2
+
 -Deep Learning CNN
 # STL-10 Image Classification with RESNET-50
 
