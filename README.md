@@ -163,20 +163,26 @@ pip install ultralytics torch torchvision torchaudio opencv-python-headless
 This project uses YOLOv8, an object detection model, implemented with the Ultralytics library. It allows you to perform object detection tasks on images and videos using a pre-trained YOLOv8n model.
 
 Clone this repository:
+```bash
 git clone https://github.com/yourusername/your-repo.git
-
+```
 Download the YOLOv8 pre-trained weights (if not already included):
+```bash
 wget https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt
+```
 Navigate to the project directory and start object detection training:
 cd /path/to/your/project
 yolo task=detect mode=train model=/path/to/yolov8n.pt data=data.yaml epochs=2 imgsz=1024 plots=True batch=32
 Once training is complete, you can perform object detection on images or videos:
 
 # Detect objects in a video
+```bash
 yolo task=detect mode=predict model=/path/to/weights/best.pt source=/path/to/video.mp4 show=True
-
+```
 # Detect objects in an image
+```bash
 yolo task=detect mode=predict model=/path/to/weights/best.pt source=/path/to/image.jpg show=True
+```
 Configuration
 You can customize the training configuration by editing the data.yaml file.
 For more options and detailed documentation, refer to the Ultralytics documentation.
